@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        if (number<2) {
+            return false;
+        } else {
+            for (let i=2;i <=Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    return false
+                }
+            }
+            return true;
+        }
+    }
+    // let number = parseInt(prompt("nhap so de kiem tra"));
+    // let result = isPrime(number);
+    // alert(result);
+    let text="";
+    let count =0;
+    let num=2
+    for ( num=2; num<1000; num++) {
+        num = parseInt(num);
+        let result = isPrime(num);
+        if (result) {
+            count ++;
+            text+= num + ",";
+        }
+    }
+    document.write("co " + count + " so la so nguyen to nho hon 1000 la :" + "<br>" + text);
+</script>
+</body>
+</html>
